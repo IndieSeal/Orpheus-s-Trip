@@ -104,3 +104,12 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+
+/Logs
+/Recordings
+/Library
+/Temp
+
+# I can't distribute bought assets, so, yeah :[, srry about that haha
+/Assets/Plugins/*
+!/Assets/Plugins/plugins.md
