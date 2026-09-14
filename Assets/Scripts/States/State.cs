@@ -2,6 +2,7 @@ using UnityEngine;
 
 public abstract class State : MonoBehaviour
 {
+    public abstract GameState MyGameState { get; }
     protected bool isInState;
     
     protected virtual void OnEnable()
@@ -16,7 +17,7 @@ public abstract class State : MonoBehaviour
 
     private void OnStateChanged(GameState state)
     {
-        if(state != GameState.Shoot)
+        if(state != MyGameState)
         {
             isInState = false;
             End();

@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class ShootState : State
 {
+    public override GameState MyGameState => GameState.Shoot;
+    
     public static Action<float> OnShoot;
     
     private bool started = false;
