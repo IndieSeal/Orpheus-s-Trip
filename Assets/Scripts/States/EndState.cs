@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class EndState : State
 {
-    public override GameState MyGameState => GameState.End;
+    public override EGameState MyGameState => EGameState.End;
 
-    protected override void Start()
+    protected override void StartState()
     {
         
     }
     
-    protected override void End()
+    protected override void FinalizedState()
     {
         
     }

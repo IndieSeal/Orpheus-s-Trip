@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public enum GameState
+public enum EGameState
 {
     Presentation,
     Hold,
@@ -11,9 +11,9 @@ public enum GameState
 
 public class GameManager : Singleton<GameManager>
 {
-    public static event Action<GameState> OnGameStateChanged;
+    public static event Action<EGameState> OnGameStateChanged;
     
-    public GameState GameState
+    public EGameState GameState
     {
         get => gameState;
         set {
@@ -21,7 +21,10 @@ public class GameManager : Singleton<GameManager>
             OnGameStateChanged?.Invoke(gameState);
         }
     }
-    private GameState gameState;
+    private EGameState gameState = EGameState.Presentation;
 
-
+    private void Start()
+    {
+        GameState = GameState;
+    }
 }

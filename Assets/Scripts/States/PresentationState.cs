@@ -1,15 +1,22 @@
+using System.Collections;
 using UnityEngine;
 
 public class PresentationState : State
 {
-    public override GameState MyGameState => GameState.Presentation;
+    public override EGameState MyGameState => EGameState.Presentation;
 
-    protected override void Start()
+    protected override void StartState()
     {
-        
+        StartCoroutine(WaitCoroutine());
     }
 
-    protected override void End()
+    private IEnumerator WaitCoroutine()
+    {
+        yield return new WaitForSeconds(1);
+        GameManager.Instance.GameState = EGameState.Hold;
+    }
+
+    protected override void FinalizedState()
     {
         
     }

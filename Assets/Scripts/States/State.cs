@@ -2,7 +2,7 @@ using UnityEngine;
 
 public abstract class State : MonoBehaviour
 {
-    public abstract GameState MyGameState { get; }
+    public abstract EGameState MyGameState { get; }
     protected bool isInState;
     
     protected virtual void OnEnable()
@@ -15,20 +15,24 @@ public abstract class State : MonoBehaviour
         GameManager.OnGameStateChanged -= OnStateChanged;
     }
 
-    private void OnStateChanged(GameState state)
+    private void OnStateChanged(EGameState state)
     {
-        if(state != MyGameState)
+        if(isInState)
         {
+            if(state == MyGameState) return;
+
             isInState = false;
-            End();
+            FinalizedState();
     
             return;
         }
-
-        isInState = true;
-        Start();
+        else if(state == MyGameState)
+        {
+            isInState = true;
+            StartState();
+        }
     }
 
-    protected abstract void Start();
-    protected abstract void End();
+    protected abstract void StartState();
+    protected abstract void FinalizedState();
 }

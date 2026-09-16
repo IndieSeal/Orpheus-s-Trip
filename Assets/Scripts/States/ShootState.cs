@@ -3,38 +3,37 @@ using UnityEngine;
 
 public class ShootState : State
 {
-    public override GameState MyGameState => GameState.Shoot;
+    public override EGameState MyGameState => EGameState.Shoot;
     
     public static Action<float> OnShoot;
     
-    private bool started = false;
     private float passedTime;
 
-    protected override void Start()
+    protected override void StartState()
     {
-        passedTime = 0;
-        started = true;
+        Debug.Log("SHOOT!");
         
+        passedTime = 0;
         UserInput.ShootPressed += Shoot;
     }
     
-    protected override void End()
+    protected override void FinalizedState()
     {
         UserInput.ShootPressed -= Shoot;
     }
 
     void Update()
     {
-        if(!started) return;
+        if(!isInState) return;
 
         passedTime += Time.deltaTime;
     }
 
     private void Shoot()
     {
-        started = false;
+        Debug.Log($"BANG! Your reaction time: {passedTime}");
 
         OnShoot?.Invoke(passedTime);
-        GameManager.Instance.GameState = GameState.End;
+        GameManager.Instance.GameState = EGameState.End;
     }
 }
