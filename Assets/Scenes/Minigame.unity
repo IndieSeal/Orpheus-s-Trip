@@ -1028,7 +1028,7 @@ Transform:
   m_GameObject: {fileID: 1945505232}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.89, y: -5.31, z: 17.09}
+  m_LocalPosition: {x: -12.89, y: -6.23, z: 17.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1045,19 +1045,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1945505232}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd6c08be151c466e3a9a32a21db04c72, type: 3}
+  m_Script: {fileID: 11500000, guid: 99be725a8db387271b8b511e44766ceb, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AlignWithWater
-  waterRenderer: {fileID: 1086447824}
-  distortionBump: {fileID: 2800000, guid: 31890676c5b178840848afa665cb5a2f, type: 3}
-  vertexDistortion: 1.37
-  distortionFrequency: 1
-  distortionSpeed: {x: 0.3, y: 0.3}
-  boatWidth: 1
-  boatLength: 2
-  heightOffset: 10
-  positionSmoothness: 5
-  rotationSmoothness: 5
+  m_EditorClassIdentifier: Assembly-CSharp::BounceWater
+  speed: 2
+  height: 1.5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
