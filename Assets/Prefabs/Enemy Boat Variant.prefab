@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4139941842744625525, guid: 1134c81b2de6b132ebaa56593ab5cda1, type: 3}
+      propertyPath: setAtStart
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5101800561884940706, guid: 1134c81b2de6b132ebaa56593ab5cda1, type: 3}
       propertyPath: m_Name
       value: Enemy Boat Variant

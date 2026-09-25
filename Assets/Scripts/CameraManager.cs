@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 [System.Serializable]
@@ -10,6 +11,12 @@ public class CameraHandle
     public Transform target;
     public Transform lookFrom;
     public float targetFOV = 30;
+
+    [Button]
+    private void SetCameraHandle()
+    {
+        CameraManager.Instance.SetHandler(this);
+    }
 }
 
 [RequireComponent(typeof(Camera))]
