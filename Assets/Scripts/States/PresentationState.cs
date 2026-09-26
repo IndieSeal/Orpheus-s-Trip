@@ -43,10 +43,12 @@ public class PresentationState : State
         yield return new WaitForSeconds(1.3f);
 
         TransitionManager.Instance.EndTransition(ETransition.Hmm);
+        TransitionManager.Instance.StartTransition(ETransition.Versus);
         meetUpAngle.CameraHandler.SetCameraHandle();
 
         yield return new WaitForSeconds(1);
 
+        TransitionManager.Instance.EndTransition(ETransition.Versus);
         GameManager.Instance.GameState = EGameState.Hold;
     }
 

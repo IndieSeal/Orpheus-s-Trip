@@ -7,6 +7,13 @@
       "dependencies": {},
       "hash": "5ac210a9a287428cb876ce9ea4ef14fe31e115b7"
     },
+    "com.lgarczyn.animate-ui-material": {
+      "version": "https://github.com/lgarczyn/AnimateUIMaterials.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "90b7f630ab8c808f095d5d5a7e387e6a95582e14"
+    },
     "com.unity.2d.animation": {
       "version": "13.0.4",
       "depth": 0,

@@ -6,7 +6,8 @@ public enum ETransition
 {
     Angry,
     Hmm,
-    Fade
+    Fade,
+    Versus
 }
 
 public class TransitionManager : Singleton<TransitionManager>

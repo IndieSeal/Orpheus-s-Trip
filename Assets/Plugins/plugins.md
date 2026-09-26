@@ -6,3 +6,4 @@ assetstore.unity.com/packages/p/odin-inspector-and-serializer-89041
 https://assetstore.unity.com/packages/vfx/shaders/all-in-1-sprite-shader-156513
 https://pixabay.com/sound-effects/nature-ocean-waves-sound-01-321570/
 https://pixabay.com/sound-effects/film-special-effects-cinematic-impact-boom-05-352465/
+https://github.com/lgarczyn/AnimateUIMaterials
