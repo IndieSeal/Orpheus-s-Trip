@@ -13,10 +13,7 @@ public class CameraHandle
     public float targetFOV = 30;
 
     [Button]
-    private void SetCameraHandle()
-    {
-        CameraManager.Instance.SetHandler(this);
-    }
+    public void SetCameraHandle() => CameraManager.Instance.SetHandler(this);
 }
 
 [RequireComponent(typeof(Camera))]

@@ -5124,7 +5124,6 @@ MonoBehaviour:
     target: {fileID: 6485349272958074277}
     lookFrom: {fileID: 3754857343978666393}
     targetFOV: 52
-  moveSpeed: 15
 --- !u!114 &2723209038447418262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5148,6 +5147,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4911779105038218422}
+  - component: {fileID: 6922555830754515785}
   m_Layer: 0
   m_Name: WideAngle
   m_TagString: Untagged
@@ -5172,6 +5172,25 @@ Transform:
   - {fileID: 3754857343978666393}
   m_Father: {fileID: 6836177458101083467}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6922555830754515785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5649862163904595621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 791e8d85b3277f64dbae857d9b8d7f10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraAngle
+  cameraHandler:
+    initialInstantTransition: 1
+    lerpSpeed: 3
+    target: {fileID: 6485349272958074277}
+    lookFrom: {fileID: 3754857343978666393}
+    targetFOV: 52
+  setAtStart: 1
 --- !u!1 &6552938033630803279
 GameObject:
   m_ObjectHideFlags: 0

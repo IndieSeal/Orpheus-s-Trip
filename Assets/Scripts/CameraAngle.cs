@@ -6,6 +6,7 @@ public class CameraAngle : MonoBehaviour
     [SerializeField] private CameraHandle cameraHandler;
 
     [SerializeField] private bool setAtStart = true;
+    public CameraHandle CameraHandler => cameraHandler;
 
     void Start()
     {
