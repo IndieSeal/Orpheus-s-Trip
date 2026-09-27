@@ -5,9 +5,11 @@ using UnityEngine;
 public enum ETransition
 {
     Angry,
+    AngryRev,
     Hmm,
     Fade,
-    Versus
+    Versus,
+    BoatView
 }
 
 public class TransitionManager : Singleton<TransitionManager>

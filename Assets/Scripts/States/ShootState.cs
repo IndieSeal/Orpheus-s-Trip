@@ -9,6 +9,9 @@ public class ShootState : State
     
     private float passedTime;
 
+    [SerializeField] private AudioSource weoweoSound;
+
+
     protected override void StartState()
     {
         Debug.Log("SHOOT!");
@@ -32,6 +35,8 @@ public class ShootState : State
     private void Shoot()
     {
         Debug.Log($"BANG! Your reaction time: {passedTime}");
+
+        weoweoSound.Play();
 
         OnShoot?.Invoke(passedTime);
         GameManager.Instance.GameState = EGameState.End;

@@ -13,16 +13,20 @@ public class PresentationState : State
     [Header("Enemy Boats")]
     [SerializeField] private Transform enemyBoatStart;
     [SerializeField] private List<BoatHandler> enemyBoatPrefabs = new List<BoatHandler>();
-    private BoatHandler currentInstance;
+    public BoatHandler CurrentEnemyInstance { get; private set; }
 
     [Header("Part 1")]
-    [SerializeField] private CameraAngle surpriseAngle;
     [SerializeField] private CameraAngle meetUpAngle;
+    [SerializeField] private AudioSource weoweoSound;
+    [SerializeField] private AudioSource impactSound;
+
+    [Header("Part 2")]
+    [SerializeField] private CameraAngle boatViewAngle;
 
     protected override void StartState()
     {
-        if(currentInstance != null) Destroy(currentInstance.gameObject);
-        currentInstance = Instantiate(enemyBoatPrefabs.GetRandomOf(), enemyBoatStart.position, Quaternion.identity);
+        if(CurrentEnemyInstance != null) Destroy(CurrentEnemyInstance.gameObject);
+        CurrentEnemyInstance = Instantiate(enemyBoatPrefabs.GetRandomOf(), enemyBoatStart.position, Quaternion.identity);
 
         StartCoroutine(WaitCoroutine());
     }
@@ -38,17 +42,49 @@ public class PresentationState : State
         }
 
         TransitionManager.Instance.StartTransition(ETransition.Hmm);
-        surpriseAngle.CameraHandler.SetCameraHandle();
+        orpheusBoat.SurpriseAngle.CameraHandler.SetCameraHandle();
+        weoweoSound.Play();
 
-        yield return new WaitForSeconds(1.3f);
+        yield return new WaitForSeconds(2.5f);
 
         TransitionManager.Instance.EndTransition(ETransition.Hmm);
         TransitionManager.Instance.StartTransition(ETransition.Versus);
         meetUpAngle.CameraHandler.SetCameraHandle();
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.2f);
+
+        impactSound.Play();
+
+        yield return new WaitForSeconds(0.8f);
 
         TransitionManager.Instance.EndTransition(ETransition.Versus);
+
+        yield return new WaitForSeconds(1);
+
+        TransitionManager.Instance.StartTransition(ETransition.AngryRev);
+        CurrentEnemyInstance.SurpriseAngle.CameraHandler.SetCameraHandle();
+
+        yield return new WaitForSeconds(2f);
+
+        TransitionManager.Instance.StartTransition(ETransition.Angry);
+        TransitionManager.Instance.EndTransition(ETransition.AngryRev);
+
+        orpheusBoat.SurpriseAngle.CameraHandler.SetCameraHandle();
+
+        yield return new WaitForSeconds(2f);
+
+        TransitionManager.Instance.EndTransition(ETransition.Angry);
+
+        TransitionManager.Instance.StartTransition(ETransition.BoatView);
+        boatViewAngle.CameraHandler.SetCameraHandle();
+
+        yield return new WaitForSeconds(5f);
+
+        TransitionManager.Instance.EndTransition(ETransition.BoatView);
+        meetUpAngle.CameraHandler.SetCameraHandle();
+
+        yield return new WaitForSeconds(1f);
+
         GameManager.Instance.GameState = EGameState.Hold;
     }
 

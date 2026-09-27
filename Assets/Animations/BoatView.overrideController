@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BoatView
+  m_Controller: {fileID: 9100000, guid: 6d3fcaccd129fec6a81a5b2c9414993e, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: a131cb81941f427be9287c1bb7969437, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ce9d76e8dc2c372349edd2e6fbc04864, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ab7b3b7faf3b574b28d827f90bfb9130, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7c227f06f9db8c74db3270a2600b6eaf, type: 2}
