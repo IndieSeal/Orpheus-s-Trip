@@ -15,9 +15,9 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
   m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogColor: {r: 0, g: 0, b: 0, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -227,12 +227,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraAngle
   cameraHandler:
-    initialInstantTransition: 1
+    initialInstantTransition: 0
     lerpSpeed: 1
     target: {fileID: 1036632586}
     lookFrom: {fileID: 1702076017}
     targetFOV: 60
-  setAtStart: 1
+  setAtStart: 0
 --- !u!4 &317897195
 Transform:
   m_ObjectHideFlags: 0
@@ -2843,7 +2843,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9a863e33b1b6b76a4b8f6b40b11182b6, type: 2}
+  - {fileID: 2100000, guid: 37f8db8a08753844da3732f5efeded54, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
