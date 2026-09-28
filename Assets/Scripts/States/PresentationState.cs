@@ -35,11 +35,13 @@ public class PresentationState : State
     {
         yield return new WaitForSeconds(1);
 
-        while(Vector3.Distance(orpheusBoat.transform.position, orpheusEnd.position) > 0.01f)
+        while(Vector3.Distance(orpheusBoat.transform.position, orpheusEnd.position) > 0.1f)
         {
             orpheusBoat.transform.position = Vector3.MoveTowards(orpheusBoat.transform.position, orpheusEnd.position, orpheusSpeed * Time.deltaTime);
             yield return null;
         }
+
+        yield return new WaitForSeconds(0.5f);
 
         TransitionManager.Instance.StartTransition(ETransition.Hmm);
         orpheusBoat.SurpriseAngle.CameraHandler.SetCameraHandle();
@@ -82,9 +84,7 @@ public class PresentationState : State
 
         TransitionManager.Instance.EndTransition(ETransition.BoatView);
         meetUpAngle.CameraHandler.SetCameraHandle();
-
-        yield return new WaitForSeconds(1f);
-
+        
         GameManager.Instance.GameState = EGameState.Hold;
     }
 

@@ -2,6 +2,6 @@ using UnityEngine;
 
 public class BoatHandler : MonoBehaviour
 {
-    [SerializeField] private CameraAngle surpriseAngle;
+    [SerializeField] protected CameraAngle surpriseAngle;
     public CameraAngle SurpriseAngle => surpriseAngle;
 }

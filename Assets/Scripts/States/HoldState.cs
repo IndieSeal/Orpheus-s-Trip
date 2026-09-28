@@ -10,6 +10,8 @@ public class HoldState : State
 
     protected override void StartState()
     {
+        UserInput.ShootPressed += Shoot;
+
         StartCoroutine(WaitCoroutine());
     }
 
@@ -21,6 +23,12 @@ public class HoldState : State
 
     protected override void FinalizedState()
     {
-        
+        StopAllCoroutines();
+        UserInput.ShootPressed -= Shoot;
+    }
+
+    private void Shoot()
+    {
+        GameManager.Instance.GameState = EGameState.EndDumb;
     }
 }

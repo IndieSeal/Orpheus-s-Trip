@@ -9,12 +9,14 @@ public class ShootState : State
     
     private float passedTime;
 
+    [SerializeField] private AudioSource shootImpactSound;
     [SerializeField] private AudioSource weoweoSound;
-
 
     protected override void StartState()
     {
-        Debug.Log("SHOOT!");
+        TransitionManager.Instance.StartTransition(ETransition.Shoot);
+        TransitionManager.Instance.EndTransition(ETransition.Shoot);
+        shootImpactSound.Play();
         
         passedTime = 0;
         UserInput.ShootPressed += Shoot;
@@ -30,6 +32,9 @@ public class ShootState : State
         if(!isInState) return;
 
         passedTime += Time.deltaTime;
+
+        // There's probably a better way to do this, but can't think rn D:
+        if(passedTime > EnemyBoatHandler.Instance.ShootTime) Shoot();
     }
 
     private void Shoot()
@@ -39,6 +44,5 @@ public class ShootState : State
         weoweoSound.Play();
 
         OnShoot?.Invoke(passedTime);
-        GameManager.Instance.GameState = EGameState.End;
     }
 }

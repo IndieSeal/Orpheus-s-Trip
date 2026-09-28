@@ -172,8 +172,42 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 2.11
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 288321900974394694, guid: 1134c81b2de6b132ebaa56593ab5cda1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5101800561884940706, guid: 1134c81b2de6b132ebaa56593ab5cda1, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 3608392228531671601}
   m_SourcePrefab: {fileID: 100100000, guid: 1134c81b2de6b132ebaa56593ab5cda1, type: 3}
+--- !u!1 &2315389263204324968 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5101800561884940706, guid: 1134c81b2de6b132ebaa56593ab5cda1, type: 3}
+  m_PrefabInstance: {fileID: 7416538879106637770}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3608392228531671601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2315389263204324968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb0d4f5557da8d5b1ace378386b94f8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyBoatHandler
+  surpriseAngle: {fileID: 7569762792144311954}
+  shootTime: 1
+--- !u!114 &7569762792144311954 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1144448633035114840, guid: 1134c81b2de6b132ebaa56593ab5cda1, type: 3}
+  m_PrefabInstance: {fileID: 7416538879106637770}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 791e8d85b3277f64dbae857d9b8d7f10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraAngle

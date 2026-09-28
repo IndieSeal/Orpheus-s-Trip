@@ -9,7 +9,8 @@ public enum ETransition
     Hmm,
     Fade,
     Versus,
-    BoatView
+    BoatView,
+    Shoot
 }
 
 public class TransitionManager : Singleton<TransitionManager>
