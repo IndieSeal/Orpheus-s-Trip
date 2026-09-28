@@ -10,7 +10,8 @@ public enum ETransition
     Fade,
     Versus,
     BoatView,
-    Shoot
+    Shoot,
+    HalfHalf
 }
 
 public class TransitionManager : Singleton<TransitionManager>
@@ -26,5 +27,10 @@ public class TransitionManager : Singleton<TransitionManager>
     public void EndTransition(ETransition transitionType)
     {
         animatorTransition[transitionType].SetTrigger("End");
+    }
+
+    public void EndAllTransitions()
+    {
+        foreach(var entry in animatorTransition) entry.Value.gameObject.SetActive(false);
     }
 }

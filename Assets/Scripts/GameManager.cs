@@ -6,9 +6,7 @@ public enum EGameState
     Presentation,
     Hold,
     Shoot,
-    EndDumb,
-    Won,
-    Lost,
+    End,
 }
 
 public class GameManager : Singleton<GameManager>
@@ -29,11 +27,13 @@ public class GameManager : Singleton<GameManager>
     void OnEnable()
     {
         ShootState.OnShoot += OnShoot;
+        UserInput.SkipPressed += OnSkip;
     }
 
     void OnDisable()
     {
         ShootState.OnShoot -= OnShoot;
+        UserInput.SkipPressed -= OnSkip;
     }
 
     private void Start()
@@ -45,7 +45,14 @@ public class GameManager : Singleton<GameManager>
     {
         // There's definitely better ways to do this, but I can't think of anything rn :[
         bool playerWon = passedTime <= EnemyBoatHandler.Instance.ShootTime;
-        GameState = playerWon ? EGameState.Won : EGameState.Lost;
+        GameState = EGameState.End;
         OnDecisionMade?.Invoke(playerWon);
+    }
+
+    private void OnSkip()
+    {
+        if(GameState != EGameState.Presentation) return;
+        
+        GameState = EGameState.Hold;
     }
 }

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1920mm"
+   height="1080mm"
+   viewBox="0 0 1920 1080"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   sodipodi:docname="SplitRectangle.svg"
+   inkscape:export-filename="EnemyTeamSplitter.png"
+   inkscape:export-xdpi="25.4"
+   inkscape:export-ydpi="25.4"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.14850557"
+     inkscape:cx="3642.961"
+     inkscape:cy="2265.9083"
+     inkscape:window-width="1920"
+     inkscape:window-height="1172"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="display:inline;fill:#ff7b7b;fill-opacity:1;stroke:none;stroke-width:18;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       d="M 0,-1.7816391 1984.746,-14.253113 1927.7335,1083.2366 799.95598,926.45234 1218.6412,725.12713 917.54414,345.63798 1117.0877,149.65769 Z"
+       id="path2"
+       inkscape:label="Red" />
+    <path
+       style="display:inline;fill:#7b7cff;fill-opacity:1;stroke:none;stroke-width:18;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       d="M -19.59803,-8.9081955 1117.0877,153.22096 922.88907,349.20126 1222.2044,734.03531 808.86415,926.45234 1929.5152,1086.7999 -40.9777,1090.3631 Z"
+       id="path3"
+       inkscape:label="Blue" />
+    <path
+       style="display:inline;fill:none;stroke:#000000;stroke-width:18;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       d="M 0,0 1120,150 920,350 1220,730 800,930 1920,1080"
+       id="path1"
+       sodipodi:nodetypes="cccccc"
+       inkscape:label="Split" />
+  </g>
+</svg>

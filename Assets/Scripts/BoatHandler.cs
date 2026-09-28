@@ -8,39 +8,37 @@ public class BoatHandler : MonoBehaviour
     [SerializeField] protected CameraAngle surpriseAngle;
     public CameraAngle SurpriseAngle => surpriseAngle;
 
+    [SerializeField] private SpriteRenderer characterSprRenderer;
+    [SerializeField] private Sprite characterDeadSprite;
+
+    [SerializeField] private Animator animator;
+
     protected void OnEnable()
     {
-        GameManager.OnDecisionMade += OnShot;
+        EndState.OnStartSink += OnSink;
         HoldState.OnDishonored += OnDishonorable;
     }
 
     protected void OnDisable()
     {
-        GameManager.OnDecisionMade -= OnShot;
+        EndState.OnStartSink -= OnSink;
         HoldState.OnDishonored -= OnDishonorable;
     }
 
     private void OnDishonorable()
     {
-        StartCoroutine(OnDishonorableCoroutine());
+        // Nothing rn
     }
 
-    protected virtual void OnShot(bool playerWon)
+    protected virtual void OnSink(bool playerWon)
     {
-        if(playerWon != IsPlayer) return;
+        if(playerWon != IsPlayer)
+        {
+            characterSprRenderer.sprite = characterDeadSprite;
+            animator.SetTrigger("Death");
+            return;
+        }
 
-        StartCoroutine(OnShotCoroutine());
-    }
-
-    protected IEnumerator OnShotCoroutine()
-    {
-        yield return null;
-        surpriseAngle.CameraHandler.SetCameraHandle();
-    }
-
-    protected IEnumerator OnDishonorableCoroutine()
-    {
-        yield return null;
-        Debug.Log("You whiffed");
+        // This boat won
     }
 }

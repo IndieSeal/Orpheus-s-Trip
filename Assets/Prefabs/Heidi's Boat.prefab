@@ -12,6 +12,22 @@ PrefabInstance:
       propertyPath: setHandler
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1082624729017483888, guid: 1134c81b2de6b132ebaa56593ab5cda1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 1082624729017483888, guid: 1134c81b2de6b132ebaa56593ab5cda1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 1082624729017483888, guid: 1134c81b2de6b132ebaa56593ab5cda1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 1607944710079342013, guid: 1134c81b2de6b132ebaa56593ab5cda1, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: baae3fccb7ba9034aa948b2db1a97208, type: 2}
     - target: {fileID: 1850557604473267029, guid: 1134c81b2de6b132ebaa56593ab5cda1, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -92,13 +108,25 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 65db24b6a653fb83b9e666fd6ef184c6, type: 3}
+    - target: {fileID: 3554016152891269233, guid: 1134c81b2de6b132ebaa56593ab5cda1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3554016152891269233, guid: 1134c81b2de6b132ebaa56593ab5cda1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 3554016152891269233, guid: 1134c81b2de6b132ebaa56593ab5cda1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4139941842744625525, guid: 1134c81b2de6b132ebaa56593ab5cda1, type: 3}
       propertyPath: setAtStart
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4563762883617760760, guid: 1134c81b2de6b132ebaa56593ab5cda1, type: 3}
       propertyPath: m_Name
-      value: Heidi
+      value: Mascot
       objectReference: {fileID: 0}
     - target: {fileID: 4911779105038218422, guid: 1134c81b2de6b132ebaa56593ab5cda1, type: 3}
       propertyPath: m_LocalScale.x
@@ -107,6 +135,14 @@ PrefabInstance:
     - target: {fileID: 5101800561884940706, guid: 1134c81b2de6b132ebaa56593ab5cda1, type: 3}
       propertyPath: m_Name
       value: Heidi's Boat
+      objectReference: {fileID: 0}
+    - target: {fileID: 5295299662279152216, guid: 1134c81b2de6b132ebaa56593ab5cda1, type: 3}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: 29c5d61d3717641cca98ce508054eeb3, type: 2}
+    - target: {fileID: 5881525348928687464, guid: 1134c81b2de6b132ebaa56593ab5cda1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6100463801421540001, guid: 1134c81b2de6b132ebaa56593ab5cda1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -199,7 +235,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyBoatHandler
   surpriseAngle: {fileID: 7569762792144311954}
+  characterSprRenderer: {fileID: 5151923567738236421}
+  characterDeadSprite: {fileID: 21300000, guid: 0814c92394459efafa4d52319ac813e5, type: 3}
+  animator: {fileID: 8123446860212419191}
   shootTime: 2
+--- !u!212 &5151923567738236421 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2419446615351128527, guid: 1134c81b2de6b132ebaa56593ab5cda1, type: 3}
+  m_PrefabInstance: {fileID: 7416538879106637770}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7569762792144311954 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1144448633035114840, guid: 1134c81b2de6b132ebaa56593ab5cda1, type: 3}
@@ -211,3 +255,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 791e8d85b3277f64dbae857d9b8d7f10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraAngle
+--- !u!95 &8123446860212419191 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1607944710079342013, guid: 1134c81b2de6b132ebaa56593ab5cda1, type: 3}
+  m_PrefabInstance: {fileID: 7416538879106637770}
+  m_PrefabAsset: {fileID: 0}

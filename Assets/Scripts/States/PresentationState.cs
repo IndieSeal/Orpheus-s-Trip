@@ -89,14 +89,15 @@ public class PresentationState : State
 
         yield return new WaitForSeconds(5f);
 
-        TransitionManager.Instance.EndTransition(ETransition.BoatView);
-        meetUpAngle.CameraHandler.SetCameraHandle();
-        
         GameManager.Instance.GameState = EGameState.Hold;
     }
 
     protected override void FinalizedState()
     {
+        orpheusBoat.transform.position = orpheusEnd.position;
+        StopAllCoroutines();
         
+        TransitionManager.Instance.EndAllTransitions();
+        meetUpAngle.CameraHandler.SetCameraHandle();
     }
 }
