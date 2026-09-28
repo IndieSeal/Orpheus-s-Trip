@@ -35,9 +35,16 @@ public class PresentationState : State
     {
         yield return new WaitForSeconds(1);
 
-        while(Vector3.Distance(orpheusBoat.transform.position, orpheusEnd.position) > 0.1f)
+        while(true)
         {
-            orpheusBoat.transform.position = Vector3.MoveTowards(orpheusBoat.transform.position, orpheusEnd.position, orpheusSpeed * Time.deltaTime);
+            Vector3 point1 = orpheusBoat.transform.position;
+            Vector3 point2 = orpheusEnd.position;
+            point1.y = orpheusBoat.transform.position.y;
+            point2.y = orpheusBoat.transform.position.y;
+
+            orpheusBoat.transform.position = Vector3.MoveTowards(point1, point2, orpheusSpeed * Time.deltaTime);
+
+            if(Vector3.Distance(point1, point2) < 0.1f) break;
             yield return null;
         }
 
