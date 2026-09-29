@@ -70,7 +70,6 @@ public class CameraManager : Singleton<CameraManager>
         {
             float multiplier = Mathf.InverseLerp(duration, 0, elapsed);
             if(!multiplyByLength) multiplier = 1;
-            Debug.Log(multiplier);
             
             float x = Random.Range(-1f, 1f) * magnitude * multiplier;
             float y = Random.Range(-1f, 1f) * magnitude * multiplier;
