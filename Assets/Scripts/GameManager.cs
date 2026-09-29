@@ -13,6 +13,8 @@ public class GameManager : Singleton<GameManager>
 {
     public static event Action<EGameState> OnGameStateChanged;
     public static event Action<bool> OnDecisionMade;
+
+    public static event Action OnSkipMade;
     
     public EGameState GameState
     {
@@ -54,5 +56,6 @@ public class GameManager : Singleton<GameManager>
         if(GameState != EGameState.Presentation) return;
         
         GameState = EGameState.Hold;
+        OnSkipMade?.Invoke();
     }
 }

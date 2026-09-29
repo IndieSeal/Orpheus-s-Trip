@@ -98,6 +98,8 @@ public class PresentationState : State
     {
         orpheusBoat.transform.position = orpheusEnd.position;
         StopAllCoroutines();
+
+        weoweoSound.Stop();
         
         TransitionManager.Instance.EndAllTransitions();
         meetUpAngle.CameraHandler.SetCameraHandle();

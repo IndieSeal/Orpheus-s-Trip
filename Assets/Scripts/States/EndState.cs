@@ -10,6 +10,7 @@ public class EndState : State
     public static event Action<bool> OnStartWinner;
 
     [SerializeField] private CameraAngle middleAngle;
+    [SerializeField] private AudioSource explosionSource;
     private bool latestWinner;
 
     protected override void OnEnable()
@@ -41,7 +42,12 @@ public class EndState : State
     private IEnumerator EyeDuelCoroutine()
     {
         TransitionManager.Instance.StartTransition(ETransition.HalfHalf);
-        yield return new WaitForSeconds(1.5f);
+
+        yield return new WaitForSeconds(0.5f);
+
+        CameraManager.Instance.InitiateShotsFired();
+        
+        yield return new WaitForSeconds(1f);
 
         // Enemy's eyes will convert into an X, and will start falling backwards
         OnStartSink?.Invoke(latestWinner);
@@ -51,7 +57,11 @@ public class EndState : State
         TransitionManager.Instance.EndTransition(ETransition.HalfHalf);
         middleAngle.CameraHandler.SetCameraHandle();
 
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(0.4f);
+
+        explosionSource.Play();
+
+        yield return new WaitForSeconds(3.6f);
 
         TransitionManager.Instance.StartTransition(ETransition.Hmm);
         OnStartWinner?.Invoke(latestWinner);
