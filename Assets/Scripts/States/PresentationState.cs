@@ -33,7 +33,9 @@ public class PresentationState : State
 
     private IEnumerator WaitCoroutine()
     {
-        yield return new WaitForSeconds(1);
+        TransitionManager.Instance.EndTransition(ETransition.Fade, true);
+
+        yield return new WaitForSeconds(0.5f);
 
         while(true)
         {

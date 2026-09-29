@@ -7,6 +7,7 @@ public class EndState : State
     public override EGameState MyGameState => EGameState.End;
 
     public static event Action<bool> OnStartSink;
+    public static event Action<bool> OnStartWinner;
 
     [SerializeField] private CameraAngle middleAngle;
     private bool latestWinner;
@@ -51,5 +52,20 @@ public class EndState : State
         middleAngle.CameraHandler.SetCameraHandle();
 
         yield return new WaitForSeconds(4f);
+
+        TransitionManager.Instance.StartTransition(ETransition.Hmm);
+        OnStartWinner?.Invoke(latestWinner);
+
+        yield return new WaitForSeconds(0.6f);
+
+        TransitionManager.Instance.StartTransition(ETransition.Fade);
+
+        yield return new WaitForSeconds(0.5f);
+
+        TransitionManager.Instance.EndTransition(ETransition.Hmm);
+        
+        yield return new WaitForSeconds(1.5f);
+
+        TransitionManager.Instance.EndTransition(ETransition.Fade);
     }
 }

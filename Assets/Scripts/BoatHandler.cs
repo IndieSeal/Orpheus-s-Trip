@@ -16,12 +16,14 @@ public class BoatHandler : MonoBehaviour
     protected void OnEnable()
     {
         EndState.OnStartSink += OnSink;
+        EndState.OnStartWinner += SetSurpriseAngle;
         HoldState.OnDishonored += OnDishonorable;
     }
 
     protected void OnDisable()
     {
         EndState.OnStartSink -= OnSink;
+        EndState.OnStartWinner -= SetSurpriseAngle;
         HoldState.OnDishonored -= OnDishonorable;
     }
 
@@ -40,5 +42,12 @@ public class BoatHandler : MonoBehaviour
         }
 
         // This boat won
+    }
+
+    private void SetSurpriseAngle(bool playerWon)
+    {
+        if(playerWon != IsPlayer) return;
+
+        SurpriseAngle.CameraHandler.SetCameraHandle();
     }
 }

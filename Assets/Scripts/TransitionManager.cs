@@ -24,9 +24,10 @@ public class TransitionManager : Singleton<TransitionManager>
         animatorTransition[transitionType].SetTrigger("Start");
     }
 
-    public void EndTransition(ETransition transitionType)
+    public void EndTransition(ETransition transitionType, bool force = false)
     {
-        animatorTransition[transitionType].SetTrigger("End");
+        animatorTransition[transitionType].gameObject.SetActive(true);
+        animatorTransition[transitionType].SetTrigger(!force ? "End" : "ForceEnd");
     }
 
     public void EndAllTransitions()
