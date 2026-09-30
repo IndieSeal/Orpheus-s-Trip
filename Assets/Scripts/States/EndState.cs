@@ -77,5 +77,6 @@ public class EndState : State
         yield return new WaitForSeconds(1.5f);
 
         TransitionManager.Instance.EndTransition(ETransition.Fade);
+        TransitionManager.Instance.StartTransition(latestWinner ? ETransition.Win : ETransition.Lose);
     }
 }
