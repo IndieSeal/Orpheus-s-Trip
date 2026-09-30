@@ -12,7 +12,10 @@ public enum ETransition
     Versus,
     BoatView,
     Shoot,
-    HalfHalf
+    HalfHalf,
+    Win,
+    Lose,
+    Dishonorable
 }
 
 public class TransitionManager : Singleton<TransitionManager>
