@@ -11,3 +11,5 @@ https://pixabay.com/sound-effects/film-special-effects-cinematic-impact-boom-04-
 https://assetstore.unity.com/packages/vfx/particles/cartoon-fx-remaster-4010
 https://pixabay.com/sound-effects/musical-cinematic-drums-fast-paced-hi-hats-257485/
 https://pixabay.com/sound-effects/epic-cinematic-explosion-454857/
+https://assetstore.unity.com/packages/tools/gui/text-animator-for-unity-ui-toolkit-and-text-mesh-pro-341308
+TextMesh Pro
