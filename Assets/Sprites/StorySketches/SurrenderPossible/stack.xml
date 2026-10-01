@@ -1,0 +1,8 @@
+﻿<image w="1920" h="1080" version="0.0.5">
+  <stack>
+    <layer opacity="1.00" name="Layer 3" composite-op="svg:src-over" src="data/layer3.png" />
+    <layer opacity="1.00" name="Layer 6" composite-op="svg:src-over" src="data/layer2.png" />
+    <layer opacity="1.00" name="Layer 2" composite-op="svg:src-over" src="data/layer1.png" />
+    <layer opacity="1.00" name="Background" composite-op="svg:src-over" src="data/layer0.png" />
+  </stack>
+</image>

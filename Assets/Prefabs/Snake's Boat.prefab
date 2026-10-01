@@ -10,7 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2315389263204324968, guid: 17fd1f7e1da5c51a6bde56014dcf16e3, type: 3}
       propertyPath: m_Name
-      value: Snake's Boat Variant
+      value: Snake's Boat
+      objectReference: {fileID: 0}
+    - target: {fileID: 3608392228531671601, guid: 17fd1f7e1da5c51a6bde56014dcf16e3, type: 3}
+      propertyPath: shootTime
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 5151923567738236421, guid: 17fd1f7e1da5c51a6bde56014dcf16e3, type: 3}
       propertyPath: m_Sprite

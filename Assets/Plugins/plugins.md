@@ -14,3 +14,4 @@ https://pixabay.com/sound-effects/epic-cinematic-explosion-454857/
 https://assetstore.unity.com/packages/tools/gui/text-animator-for-unity-ui-toolkit-and-text-mesh-pro-341308
 TextMesh Pro
 https://pixabay.com/sound-effects/film-special-effects-sniper-rifle-firing-shot-1-39789/
+https://fonts.google.com/selection?preview.layout=grid&categoryFilters=Feeling:%2FExpressive%2FPlayful;Calligraphy:%2FScript%2FHandwritten&preview.script=Latn

@@ -446,7 +446,7 @@ PrefabInstance:
 
 
         Orpheus was
-        scared for their life.'
+        scared for their life.<waitfor=1.5>'
       objectReference: {fileID: 0}
     - target: {fileID: 7016116149405676075, guid: 29c38daf6eb0047e399fb16b2c17cf35, type: 3}
       propertyPath: m_VerticalAlignment
@@ -514,11 +514,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7083548719802847574, guid: 29c38daf6eb0047e399fb16b2c17cf35, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -145
+      value: -81
       objectReference: {fileID: 0}
     - target: {fileID: 7083548719802847574, guid: 29c38daf6eb0047e399fb16b2c17cf35, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 37
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7083548719802847574, guid: 29c38daf6eb0047e399fb16b2c17cf35, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -747,7 +747,7 @@ PrefabInstance:
 
 
         Will Orpheus be able to pay
-        the Snake back, or will they be defeated?'
+        the Snake back, or will they be defeated?<waitfor=1.5>'
       objectReference: {fileID: 0}
     - target: {fileID: 7083548719802847574, guid: 29c38daf6eb0047e399fb16b2c17cf35, type: 3}
       propertyPath: m_Pivot.x
@@ -2129,6 +2129,15 @@ PrefabInstance:
     - target: {fileID: 6851373691568857632, guid: 29c38daf6eb0047e399fb16b2c17cf35, type: 3}
       propertyPath: m_Name
       value: AnimatedStoryText
+      objectReference: {fileID: 0}
+    - target: {fileID: 7016116149405676075, guid: 29c38daf6eb0047e399fb16b2c17cf35, type: 3}
+      propertyPath: m_text
+      value: 'Orpheus had made a really bad decision...
+
+
+        They had taken
+        a loan, and time was due, they delivered all the money they had. But it wasn''t
+        enough...<waitfor=1.5>'
       objectReference: {fileID: 0}
     - target: {fileID: 7083548719802847574, guid: 29c38daf6eb0047e399fb16b2c17cf35, type: 3}
       propertyPath: m_Pivot.x

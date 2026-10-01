@@ -75,8 +75,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0f8edb044571de72789fb577dc7300ed, type: 2}
+  m_sharedMaterial: {fileID: -4296427366764322820, guid: 0f8edb044571de72789fb577dc7300ed, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -160,18 +160,24 @@ MonoBehaviour:
   typewriterStartsAutomatically: 1
   animationLoop: 0
   timeScale: 0
-  _text: 
+  _text: 'Orpheus had made a really bad decision...
+
+
+    They had taken a loan,
+    and time was due, they delivered all the money they had. But it wasn''t enough...
+
+'
   useDynamicScaling: 1
   referenceFontSize: 10
   isResettingTimeOnNewText: 1
   useDefaultDatabases: 1
-  databaseBehaviors: {fileID: 0}
-  databaseAppearances: {fileID: 0}
+  databaseBehaviors: {fileID: 11400000, guid: 101c00018bbd152b4ace7770fac5d8fa, type: 2}
+  databaseAppearances: {fileID: 11400000, guid: eeed54ebca155c9ed863e50a5b8c9be2, type: 2}
   useDefaultStyleSheet: 1
   styleSheet: {fileID: 0}
-  databaseActions: {fileID: 0}
+  databaseActions: {fileID: 11400000, guid: 0f973fa3b9b55ed07bbdd2494c015b0c, type: 2}
   defaultAppearancesTags:
-  - size
+  - vertexp
   defaultDisappearancesTags:
   - fade
   defaultBehaviorsTags: []
