@@ -15,3 +15,4 @@ https://assetstore.unity.com/packages/tools/gui/text-animator-for-unity-ui-toolk
 TextMesh Pro
 https://pixabay.com/sound-effects/film-special-effects-sniper-rifle-firing-shot-1-39789/
 https://fonts.google.com/selection?preview.layout=grid&categoryFilters=Feeling:%2FExpressive%2FPlayful;Calligraphy:%2FScript%2FHandwritten&preview.script=Latn
+https://pixabay.com/sound-effects/nature-thunder-strike-124463/
