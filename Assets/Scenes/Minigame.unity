@@ -10630,6 +10630,7 @@ MonoBehaviour:
   enemyBoatStart: {fileID: 584002110}
   enemyBoatPrefabs:
   - {fileID: 3608392228531671601, guid: 17fd1f7e1da5c51a6bde56014dcf16e3, type: 3}
+  - {fileID: 2429565205072818131, guid: 56d7a355ee4c8941b967f20391de27be, type: 3}
   meetUpAngle: {fileID: 977946548}
   weoweoSound: {fileID: 1742189218}
   impactSound: {fileID: 1145712624}
