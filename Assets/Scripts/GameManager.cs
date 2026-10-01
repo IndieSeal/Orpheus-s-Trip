@@ -7,6 +7,7 @@ public enum EGameState
     Hold,
     Shoot,
     End,
+    Dishonored
 }
 
 public class GameManager : Singleton<GameManager>

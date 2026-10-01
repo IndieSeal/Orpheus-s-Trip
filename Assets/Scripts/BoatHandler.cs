@@ -13,23 +13,18 @@ public class BoatHandler : MonoBehaviour
 
     [SerializeField] private Animator animator;
 
-    protected void OnEnable()
+    protected virtual void OnEnable()
     {
         EndState.OnStartSink += OnSink;
         EndState.OnStartWinner += SetSurpriseAngle;
-        HoldState.OnDishonored += OnDishonorable;
+        DishonorableState.OnStartDishonorableCharge += OnSinkDishonorably;
     }
 
-    protected void OnDisable()
+    protected virtual void OnDisable()
     {
         EndState.OnStartSink -= OnSink;
         EndState.OnStartWinner -= SetSurpriseAngle;
-        HoldState.OnDishonored -= OnDishonorable;
-    }
-
-    private void OnDishonorable()
-    {
-        // Nothing rn
+        DishonorableState.OnStartDishonorableCharge -= OnSinkDishonorably;
     }
 
     protected virtual void OnSink(bool playerWon)
@@ -44,7 +39,12 @@ public class BoatHandler : MonoBehaviour
         // This boat won
     }
 
-    private void SetSurpriseAngle(bool playerWon)
+    protected virtual void OnSinkDishonorably()
+    {
+        animator.SetTrigger("Death");
+    }
+
+    protected void SetSurpriseAngle(bool playerWon)
     {
         if(playerWon != IsPlayer) return;
 

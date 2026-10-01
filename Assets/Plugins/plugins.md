@@ -13,3 +13,4 @@ https://pixabay.com/sound-effects/musical-cinematic-drums-fast-paced-hi-hats-257
 https://pixabay.com/sound-effects/epic-cinematic-explosion-454857/
 https://assetstore.unity.com/packages/tools/gui/text-animator-for-unity-ui-toolkit-and-text-mesh-pro-341308
 TextMesh Pro
+https://pixabay.com/sound-effects/film-special-effects-sniper-rifle-firing-shot-1-39789/

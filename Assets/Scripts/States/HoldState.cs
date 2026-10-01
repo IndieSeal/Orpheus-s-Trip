@@ -38,7 +38,7 @@ public class HoldState : State
     private void Shoot()
     {
         OnDishonored?.Invoke();
-        GameManager.Instance.GameState = EGameState.End;
+        GameManager.Instance.GameState = EGameState.Dishonored;
     }
 
     private void TryDisableDrums(EGameState state)

@@ -13,4 +13,23 @@ public class EnemyBoatHandler : BoatHandler
     {
         Instance = this;
     }
+
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+
+        DishonorableState.OnEndDishonorableCharge += SetSurpriseAngle;
+    }
+
+    protected override void OnDisable()
+    {
+        base.OnDisable();
+
+        DishonorableState.OnEndDishonorableCharge -= SetSurpriseAngle;
+    }
+
+    protected override void OnSinkDishonorably()
+    {
+        
+    }
 }
