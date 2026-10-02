@@ -17,4 +17,8 @@ Right Click / X : Skip cinematic
 ## Credits / Resources:
 [Resource List](https://github.com/IndieSeal/Orpheus-s-Trip/blob/main/Assets/Plugins/plugins.md)
 
+**NO AI WAS USED IN THE CREATION OF THIS PROJECT**
+<br>
+<br>
+
 I hope you enjoy it <3!
