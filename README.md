@@ -1,5 +1,7 @@
 # Orpheus's Adventure
-IT IS HIGHLY RECOMMENDED TO HAVE AUDIO AND HEADPHONES FOR THE BEST IN-GAME EXPERIENCE!
+IT IS HIGHLY RECOMMENDED TO HAVE AUDIO AND HEADPHONES FOR THE BEST IN-GAME EXPERIENCE! 
+
+<img width="700" height="395" alt="ezgif com-crop" src="https://github.com/user-attachments/assets/89ec0bd0-a4df-4368-9bad-e63268d10f1d" />
 
 Help Orpheus recover from their debt with the deviled snake!
 You will to elp Orpheus steal money from other pirates and return the money to the Snake, or shall you set the town free and try to kill the snake? It's up to you.
@@ -13,6 +15,6 @@ Right Click / X : Skip cinematic
 - C#
 
 ## Credits / Resources:
-[Resource List](https://github.com/IndieSeal/SealWebOS/blob/main/RESOURCES.md)
+[Resource List](https://github.com/IndieSeal/Orpheus-s-Trip/blob/main/Assets/Plugins/plugins.md)
 
 I hope you enjoy it <3!
