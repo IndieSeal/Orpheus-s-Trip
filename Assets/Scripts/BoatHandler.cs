@@ -37,6 +37,7 @@ public class BoatHandler : MonoBehaviour
         }
 
         // This boat won
+        animator.SetTrigger("Shoot");
     }
 
     protected virtual void OnSinkDishonorably()
