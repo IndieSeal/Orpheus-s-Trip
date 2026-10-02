@@ -17,3 +17,5 @@ https://pixabay.com/sound-effects/film-special-effects-sniper-rifle-firing-shot-
 https://fonts.google.com/selection?preview.layout=grid&categoryFilters=Feeling:%2FExpressive%2FPlayful;Calligraphy:%2FScript%2FHandwritten&preview.script=Latn
 https://pixabay.com/sound-effects/nature-thunder-strike-124463/
 https://sketchfab.com/3d-models/low-poly-gold-ingots-8984137c0eb346ca8f6a8b6291ae50d4
+https://kenney-assets.itch.io/input-prompts
+https://seansleblanc.itch.io/better-minimal-webgl-template
