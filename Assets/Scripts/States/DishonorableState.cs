@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DishonorableState : State
 {
@@ -12,18 +13,35 @@ public class DishonorableState : State
     [SerializeField] private AudioSource singleShotSource;
     [SerializeField] private AudioSource explosionSource;
 
+    [SerializeField] private Button skipButton;
+    private bool isWaiting;
+
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+
+        skipButton.onClick.AddListener(SkipButtonPressed);
+    }
+
+    protected override void OnDisable()
+    {
+        base.OnDisable();
+
+        skipButton.onClick.RemoveListener(SkipButtonPressed);
+    }
+
     protected override void StartState()
     {
         StartCoroutine(DishonoredCoroutine());
     }
+    protected override void FinalizedState() { }
 
-    protected override void FinalizedState()
-    {
-        
-    }
+    private void SkipButtonPressed() =>isWaiting = false;
 
     private IEnumerator DishonoredCoroutine()
     {
+        isWaiting = true;
+        
         singleShotSource.Play();
         
         TransitionManager.Instance.StartTransition(ETransition.Fade);
@@ -33,7 +51,10 @@ public class DishonorableState : State
 
         TransitionManager.Instance.StartTransition(ETransition.Dishonorable);
         
-        yield return new WaitForSeconds(13f);
+        StartCoroutine(WaitTillItsOver());
+        while (isWaiting) yield return null;
+
+        isWaiting = false;
 
         TransitionManager.Instance.StartTransition(ETransition.Fade);
         TransitionManager.Instance.EndTransition(ETransition.Fade);
@@ -57,5 +78,12 @@ public class DishonorableState : State
         yield return new WaitForSeconds(1f);
         
         TransitionManager.Instance.StartTransition(ETransition.Lose);
+    }
+
+    private IEnumerator WaitTillItsOver()
+    {
+        yield return new WaitForSeconds(13f);
+        
+        isWaiting = false;
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 
 public class ShootState : State
@@ -7,10 +8,26 @@ public class ShootState : State
     
     public static Action<float> OnShoot;
     
+    [SerializeField] private TMP_Text win_passedTimeTxt;
+    [SerializeField] private TMP_Text lose_passedTimeTxt;
     private float passedTime;
 
     [SerializeField] private AudioSource shootImpactSound;
     [SerializeField] private AudioSource weoweoSound;
+
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+
+        HoldState.OnDishonored += SetEnemiesReaction;
+    }
+
+    protected override void OnDisable()
+    {
+        base.OnDisable();
+
+        HoldState.OnDishonored -= SetEnemiesReaction;
+    }
 
     protected override void StartState()
     {
@@ -39,10 +56,16 @@ public class ShootState : State
 
     private void Shoot()
     {
-        Debug.Log($"BANG! Your reaction time: {passedTime}");
-
         weoweoSound.Play();
 
+        SetEnemiesReaction();
+        win_passedTimeTxt.text = $"Your reaction time: {Math.Round(passedTime, 2)}s";
+    
         OnShoot?.Invoke(passedTime);
+    }
+
+    private void SetEnemiesReaction()
+    {
+        lose_passedTimeTxt.text = $"Enemie's reaction time: {EnemyBoatHandler.Instance.ShootTime}s";
     }
 }
