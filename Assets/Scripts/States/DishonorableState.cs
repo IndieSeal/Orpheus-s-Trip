@@ -51,7 +51,6 @@ public class DishonorableState : State
 
         TransitionManager.Instance.StartTransition(ETransition.Dishonorable);
         
-        StartCoroutine(WaitTillItsOver());
         while (isWaiting) yield return null;
 
         isWaiting = false;
@@ -78,12 +77,5 @@ public class DishonorableState : State
         yield return new WaitForSeconds(1f);
         
         TransitionManager.Instance.StartTransition(ETransition.Lose);
-    }
-
-    private IEnumerator WaitTillItsOver()
-    {
-        yield return new WaitForSeconds(13f);
-        
-        isWaiting = false;
     }
 }
